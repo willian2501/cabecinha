@@ -1,0 +1,21 @@
+{
+  "name": "YouTube → Python Downloader",
+  "description": "Send YouTube video URL to local Python app",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "http://localhost:5005/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
